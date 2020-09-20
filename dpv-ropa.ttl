@@ -1,0 +1,198 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <http://w3.org/ns/dpv#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix status: <http://purl.org/ontology/bibo/status/> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ropa: <https://w3id.org/dpv-ropa#> .
+
+ropa:ROPA a rdfs:Class ;
+    rdfs:label "Register of Processing Activities (ROPA)"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "A ROPA is a document maintained by Data Controllers detailing processing activities carried out under their responsibility"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:DPIA a rdfs:Class ;
+    rdfs:label "Data Protection Impact Assessment (DPIA)"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "A DPIA specifies the potential and actual impact of processing activities on individuals or groups of individuals"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:ControllerRepresentative a rdfs:Class ;
+    rdfs:label "Controller Representative"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Representative of the Data Controller"@en ;
+    sw:term_status "proposed" .
+
+ropa:JointController a rdfs:Class ;
+    rdfs:label "Joint Controller"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Two or more Data Controller jointly determining the purposes of processing personal data"@en ;
+    rdfs:subClassOf dpv:DataController ;
+    sw:term_status "proposed" .
+
+ropa:VulnerableDataSubjet a rdfs:Class ;
+    rdfs:label "Vulnerable Data Subject"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards"@en ;
+    rdfs:subClassOf dpv:DataSubject ;
+    sw:term_status "proposed" .
+
+ropa:DataSource a rdfs:Class ;
+    rdfs:label "Data Source"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Indicates source of data i.e. where the data is collected or obtained from. Note that this differs from 'origin' which indicates where the data originated from. Source of data can be different from the origin."@en ;
+    sw:term_status "proposed" .
+
+ropa:DataProcessingAgreement a rdfs:Class ;
+    rdfs:label "Data Processing Agreement"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "A Data Processing Agreement between one or more Data Controllers and one or more Data Processors outlines the nature and scope of activities to be carried out by the Processor on behalf of the Controller"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:ThirdCountry a rdfs:Class ;
+    rdfs:label "Third Country"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a country outside applicable or compatible jurisdiction as outlined in law"@en ;
+    sw:term_status "proposed" .
+
+ropa:SafeguardForDataTransfer a rdfs:Class ;
+    rdfs:label "Safeguard for Data Transfer"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a safeguard used for data transfer. Can include technical or organisational measures."@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasures ;
+    sw:term_status "proposed" .
+
+ropa:Risk a rdfs:Class ;
+    rdfs:label "Risk"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a specific risk or category of risks associated with processing of personal data"@en ;
+    sw:term_status "proposed" .
+
+ropa:RiskMitigationMeasure a rdfs:Class ;
+    rdfs:label "Risk Mitigation Measure"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a measure intended to mitigate, minimise, or prevent risk."@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+ropa:mitigatesRisk a rdfs:Property ;
+    rdfs:label "mitigates risk"@en ;
+    rdfs:description "indicates which risk is mitigated by this measure"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    rdfs:domain ropa:RiskMitigationMeasure ;
+    rdfs:range ropa:Risk ;
+    sw:term_status "proposed" .
+
+ropa:DPIA a rdfs:Class ;
+    rdfs:label "Data Protection Impact Assessment (DPIA)"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "A DPIA is process designed to systematically analyse, identify, and minimise data protection risks"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:DataSubjectRight a rdfs:Class ;
+    rdfs:label "Right of Data Subject"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a right afforded to the data subject under law"@en ;
+    sw:term_status "proposed" .
+
+ropa:PrivacyNotice a rdfs:Class ;
+    rdfs:label "Privacy Notice"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents a notice or document outlining information regarding privacy"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:LegitimateInterestAssessment a rdfs:Class ;
+    rdfs:label "Legitimate Interest Assessment"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Indicates an assessment regarding the use of legitimate interest as a lawful basis by the data controller"@en ;
+    rdfs:subClassOf dpv:OrganisationalMeasure ;
+    sw:term_status "proposed" .
+
+ropa:DataBreach a rdfs:Class ;
+    rdfs:label "Data Breach"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "A data breach is an intentional or unintentional disclosure of personal data"@en ;
+    sw:term_status "proposed" .
+
+ropa:ConsultationWithDPA a rdfs:Class ;
+    rdfs:label "Consultation with DPA"@en ;
+    dct:created "2020-09-21"^^xsd:date ;
+    dct:creator "Harshvardhan J. Pandit" ;
+    dct:creator "Paul Ryan" ;
+    dct:creator "Rob Brennan" ;
+    dct:description "Represents information about a consultation with a DPA"@en ;
+    sw:term_status "proposed" .
+
+# These concepts are unclear
+# Data Processing Status --> what is status here?
+# Processing Activity --> main or auxillary
+# Technology --> what does this mean? Technical Measure ???
+# Recipient Category == rdfs:subClassOf dpv:Recipient ???
+# Nature Of Data Transfer --> what is nature?
+# Process --> what is a 'process' and owner???
+# Data subject category == rdfs:subClassOf dpv:DataSubject ???
+# Classification Level --> classification of what ???
