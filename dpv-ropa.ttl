@@ -119,6 +119,7 @@ ropa:RiskMitigationMeasure a rdfs:Class ;
     dct:description "Represents a measure intended to mitigate, minimise, or prevent risk."@en ;
     rdfs:subClassOf dpv:OrganisationalMeasure ;
     sw:term_status "proposed" .
+    
 ropa:mitigatesRisk a rdfs:Property ;
     rdfs:label "mitigates risk"@en ;
     rdfs:description "indicates which risk is mitigated by this measure"@en ;
@@ -186,13 +187,3 @@ ropa:ConsultationWithDPA a rdfs:Class ;
     dct:creator "Rob Brennan" ;
     dct:description "Represents information about a consultation with a DPA"@en ;
     sw:term_status "proposed" .
-
-# These concepts are unclear
-# Data Processing Status --> what is status here?
-# Processing Activity --> main or auxillary
-# Technology --> what does this mean? Technical Measure ???
-# Recipient Category == rdfs:subClassOf dpv:Recipient ???
-# Nature Of Data Transfer --> what is nature?
-# Process --> what is a 'process' and owner???
-# Data subject category == rdfs:subClassOf dpv:DataSubject ???
-# Classification Level --> classification of what ???
